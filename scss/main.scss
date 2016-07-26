@@ -1,0 +1,166 @@
+﻿/*====== Import other scss files ======*/
+
+@import 'vars.scss';
+@import 'mixins.scss';
+
+/*====== Import font WisdomScript ======*/
+
+@font-face {
+    src: url('../fonts/WisdomScriptAJ.ttf') format('truetype');
+    font-family: WisdomScript;
+}
+
+/*====== Import font Montserrat Light ======*/
+
+@font-face {
+    src: url('../fonts/Montserrat-Light.otf') format('opentype');
+    font-family: Montserrat-Light;
+}
+
+/*====== Import font Montserrat Bold ======*/
+
+@font-face {
+    src: url('../fonts/Montserrat-Bold.otf') format('opentype');
+    font-family: Montserrat-Bold;
+}
+
+/*====== Import font DroidSerif Italic ======*/
+
+@font-face {
+    src: url('../fonts/DroidSerif-Italic.ttf') format('opentype');
+    font-family: DroidSerif-Italic;
+}
+
+/*====== Grid system ======*/
+
+.grid {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*====== Style for all article headings ======*/
+
+.art-heading {color: $dark; font: bold 40px Montserrat-Bold; text-transform: uppercase;}
+
+.cls:before,
+.cls:after {content: " "; display: table;}
+.cls:after {clear: both;}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: 0;
+    font-family: Montserrat-Light;
+    font-size: .92em;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.header-container {
+    width: 100%;
+    box-sizing: border-box;
+    background: url('../img/background-img.jpg') center/cover no-repeat;
+
+    .nav-container {
+
+        .logo {
+            float: left;
+            color: $yellow;
+            font: normal 26px WisdomScript, sans-serif;
+            height: 40px;
+            padding: 40px 0;
+            line-height: 40px;
+        }
+
+        .nav {
+            list-style-type: none;
+            position: relative;
+            *zoom: 1;
+            margin: 0;
+            padding: 0;
+            float: right;
+
+            .nav-item {
+                float: left;
+
+                .nav-links {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font: normal 14px/17px Montserrat-Light;
+                    display: inline-block;
+                    padding: 45px 20px;
+                    height: 40px;
+                    line-height: 40px;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper-container {
+        padding: 220px;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+
+        .welcome-text {
+            font: italic 40px DroidSerif-Italic;
+            color: #fff;
+        }
+
+        .welcome-text-2 {
+            font: bold 75px Montserrat-Bold;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .tell-me-more {
+            padding-top: 60px;
+
+            .tell-me-more-btn {
+                border: 1px solid $yellow;
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                font: bold 18px Montserrat-Bold;
+                color: #fff;
+                padding: 22px 50px;
+                background: $yellow;
+                -webkit-transition: all linear .1s;
+                   -moz-transition: all linear .1s;
+                        transition: all linear .1s;
+
+                &:hover {
+                    background: transparent;
+                    -webkit-transition: all linear .1s;
+                       -moz-transition: all linear .1s;
+                            transition: all linear .1s;
+                    }
+            }
+        }
+    }
+}
+
+.service {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+
+    .service-art {
+        text-align: center;
+
+        & p {
+            font: italic 14px DroidSerif-Italic;
+            color: #777;
+            margin-top: -18px;
+        }
+    }
+}
